@@ -1,0 +1,37 @@
+PODS:
+  - AMap3DMap (2.6.1)
+  - AMapCloudMap (1.2.0)
+  - AMapSearch (2.6.0)
+  - IQKeyboardManager (3.3.2)
+  - Masonry (0.6.3)
+  - MBProgressHUD (0.9.1)
+  - MJExtension (2.5.12)
+  - MJRefresh (2.4.11)
+  - OpenUDID (1.0.0)
+  - REFrostedViewController (2.4.8)
+
+DEPENDENCIES:
+  - AMap3DMap (~> 2.6.1)
+  - AMapCloudMap (~> 1.2.0)
+  - AMapSearch (~> 2.6.0)
+  - IQKeyboardManager
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - OpenUDID (~> 1.0.0)
+  - REFrostedViewController
+
+SPEC CHECKSUMS:
+  AMap3DMap: 9ddc896034f7b5b8e28848c8abf7488a37e2897e
+  AMapCloudMap: dce3eb6d6a861fc90ac9c15ffdfa4b4301057d2a
+  AMapSearch: 0ea3101eec4b9f500b53e33dcda30d343d41613b
+  IQKeyboardManager: d863eb0bca424d1f6dad6bdd1f856af52664add8
+  Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJExtension: 5ab633484e431f777387c70b676c80f993361f1b
+  MJRefresh: b327947f35ab3eb16ca42646b26f7347e6aa7186
+  OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
+  REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
+
+COCOAPODS: 0.39.0
