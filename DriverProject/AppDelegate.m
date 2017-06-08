@@ -25,7 +25,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    LZJNavigationController *navigation = [[LZJNavigationController alloc]initWithRootViewController: [[HomeViewController alloc] init]];
+    LZJNavigationController *navigation = [[LZJNavigationController alloc] initWithRootViewController: [[HomeViewController alloc] init]];
     navigation.navigationBar.barTintColor = [UIColor whiteColor];
     NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor blackColor],NSForegroundColorAttributeName, nil];
     navigation.navigationBar.titleTextAttributes = dic;

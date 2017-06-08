@@ -501,7 +501,7 @@
 }
 
 //判断请求是否成功
--(BOOL)requestSuccess:(NSDictionary*)response
+- (BOOL)requestSuccess:(NSDictionary*)response
 {
     BOOL bSuccess = NO;
     if ([response isKindOfClass:[NSDictionary class]])
@@ -517,7 +517,7 @@
     return bSuccess;
 }
 
--(id)parseServerData:(id)data key:(NSString*)strKey
+- (id)parseServerData:(id)data key:(NSString*)strKey
 {
     id object = nil;
     if ([data isKindOfClass:[NSDictionary class]]

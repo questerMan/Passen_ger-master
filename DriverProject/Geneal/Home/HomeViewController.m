@@ -53,7 +53,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     NSLog(@"+++______+++%@",[NSUserDefaults standardUserDefaults]);
     //添加地图
     mapView = [MapView sharedInstanceWithFrame:self.view.frame];

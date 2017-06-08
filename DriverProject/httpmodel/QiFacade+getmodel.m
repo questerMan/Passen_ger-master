@@ -36,7 +36,7 @@
 
 #pragma - mark 获取个人资料
 
--(NSInteger)getAccountData
+- (NSInteger)getAccountData
 {
     NSString *StringURL=[NSString stringWithFormat:@"%@/account",SEVER_API];
     
@@ -48,7 +48,7 @@
 
 #pragma - mark 行程记录
 
--(NSInteger)getOrder:(NSString *)page Per_page:(NSString *)per_page
+- (NSInteger)getOrder:(NSString *)page Per_page:(NSString *)per_page
 {
     NSMutableDictionary* requestDict = [NSMutableDictionary dictionary];
     [requestDict setObject:page forKey:@"page"];
