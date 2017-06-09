@@ -808,7 +808,6 @@
                         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"正在获取车型" message:nil delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                         [alert show];
                     }
-                    
                 }
                     break;
                     

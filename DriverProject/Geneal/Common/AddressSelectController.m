@@ -96,9 +96,9 @@
             location.name = [obj objectForKey:@"name"];
             location.cityCode = [obj objectForKey:@"cityCode"]?:@"020";
             location.address = [obj objectForKey:@"address"];
-            if ([[obj objectForKey:@"coordinateLon"] floatValue] != 0 && [[obj objectForKey:@"coordinateLon"] floatValue] != 0) {
+            if ([[obj objectForKey:@"coordinateLon"] floatValue] != 0 && [[obj objectForKey:@"coordinateLat"] floatValue] != 0) {
                 location.coordinateLon = [[obj objectForKey:@"coordinateLon"] floatValue];
-                location.coordinateLat = [[obj objectForKey:@"coordinateLon"] floatValue];
+                location.coordinateLat = [[obj objectForKey:@"coordinateLat"] floatValue];
                 [locArr addObject:location];
             }
 //            location.coordinateLon = [[obj objectForKey:@"coordinateLon"] floatValue];
@@ -110,7 +110,6 @@
             _locations = [NSMutableArray arrayWithArray:locArr];
         }
     }
-    
 }
 
 - (void)creatLocationTable
@@ -546,7 +545,6 @@
             NSInteger time = path.duration;
             NSLog(@"距离：%f米，耗时：%f分钟",(float)(dis/1000),(float)(time/60));
         }
-        
     }];
 }
 
