@@ -40,6 +40,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     cancelBtn.frame = CGRectMake(0, 0, 70, 40);
     [cancelBtn setTitleColor:kUIColorFromRGB(0x212121) forState:UIControlStateNormal];
@@ -86,6 +87,16 @@
     [self createTheCustomViewByType:self.pageType];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back"] style:UIBarButtonItemStylePlain target:self action:@selector(backToRootView)];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(oneClick)];
+}
+
+- (void)oneClick{
+    
 }
 
 -(void)createTheCustomViewByType:(NSString *)pageType
