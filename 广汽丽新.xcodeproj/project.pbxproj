@@ -58,6 +58,9 @@
 		46BA25951BC2392C009F32D0 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA25651BC2392C009F32D0 /* whiteArrow@2x.png */; };
 		46BA25961BC2392C009F32D0 /* CCBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BA25671BC2392C009F32D0 /* CCBBaseViewController.m */; };
 		46BA25971BC2392C009F32D0 /* UpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BA25691BC2392C009F32D0 /* UpdateAlertView.m */; };
+		827E3CB51EEFCC87000D755A /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 827E3CB31EEFCC87000D755A /* libUMessage_Sdk_1.5.0a.a */; };
+		827E3CB71EEFCC9C000D755A /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 827E3CB61EEFCC9C000D755A /* UserNotifications.framework */; };
+		827E3CB91EEFCCC6000D755A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 827E3CB81EEFCCC6000D755A /* libz.tbd */; };
 		B3224A591B983D8700696D66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224A581B983D8700696D66 /* main.m */; };
 		B3224A5C1B983D8700696D66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224A5B1B983D8700696D66 /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		B3224A5F1B983D8700696D66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224A5E1B983D8700696D66 /* ViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -422,6 +425,11 @@
 		46BA25681BC2392C009F32D0 /* UpdateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateAlertView.h; sourceTree = "<group>"; };
 		46BA25691BC2392C009F32D0 /* UpdateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAlertView.m; sourceTree = "<group>"; };
 		63B0C45E109158722FEF0A72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		827E3CB31EEFCC87000D755A /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
+		827E3CB41EEFCC87000D755A /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
+		827E3CB61EEFCC9C000D755A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		827E3CB81EEFCCC6000D755A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		827E3CBA1EEFCD45000D755A /* 广汽丽新.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "广汽丽新.entitlements"; sourceTree = "<group>"; };
 		947EEF7D879EE9D22D6E8AF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3224A531B983D8700696D66 /* 广汽丽新.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "广汽丽新.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3224A571B983D8700696D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -683,11 +691,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				827E3CB91EEFCCC6000D755A /* libz.tbd in Frameworks */,
+				827E3CB71EEFCC9C000D755A /* UserNotifications.framework in Frameworks */,
 				BFAF90751BDE28CE001A5F38 /* libstdc++.6.0.9.dylib in Frameworks */,
 				BFAF90731BDE28C1001A5F38 /* libz.dylib in Frameworks */,
 				C04CB93F1BF0502B002D6472 /* libWeChatSDK.a in Frameworks */,
 				BFAF90711BDE28BA001A5F38 /* CoreTelephony.framework in Frameworks */,
 				BFAF906F1BDE28AC001A5F38 /* SystemConfiguration.framework in Frameworks */,
+				827E3CB51EEFCC87000D755A /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				BFAF906D1BDE289F001A5F38 /* CoreLocation.framework in Frameworks */,
 				BFAF906B1BDE288E001A5F38 /* QuartzCore.framework in Frameworks */,
 				B3224A9E1B983E3F00696D66 /* libz.1.2.5.dylib in Frameworks */,
@@ -816,6 +827,8 @@
 		61A501473F6EF0D98165A372 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				827E3CB81EEFCCC6000D755A /* libz.tbd */,
+				827E3CB61EEFCC9C000D755A /* UserNotifications.framework */,
 				BFAF90741BDE28CE001A5F38 /* libstdc++.6.0.9.dylib */,
 				BFAF90721BDE28C1001A5F38 /* libz.dylib */,
 				BFAF90701BDE28BA001A5F38 /* CoreTelephony.framework */,
@@ -837,9 +850,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		827E3CB21EEFCC87000D755A /* UMessage_Sdk_1.5.0a */ = {
+			isa = PBXGroup;
+			children = (
+				827E3CB31EEFCC87000D755A /* libUMessage_Sdk_1.5.0a.a */,
+				827E3CB41EEFCC87000D755A /* UMessage.h */,
+			);
+			path = UMessage_Sdk_1.5.0a;
+			sourceTree = "<group>";
+		};
 		B3224A4A1B983D8700696D66 = {
 			isa = PBXGroup;
 			children = (
+				827E3CBA1EEFCD45000D755A /* 广汽丽新.entitlements */,
 				B3224A551B983D8700696D66 /* DriverProject */,
 				B3224A6F1B983D8800696D66 /* DriverProjectTests */,
 				B3224A541B983D8700696D66 /* Products */,
@@ -1184,6 +1207,7 @@
 		C04CB93B1BF0502B002D6472 /* SDKExport */ = {
 			isa = PBXGroup;
 			children = (
+				827E3CB21EEFCC87000D755A /* UMessage_Sdk_1.5.0a */,
 				C04CB93C1BF0502B002D6472 /* libWeChatSDK.a */,
 				C04CB93D1BF0502B002D6472 /* WXApi.h */,
 				C04CB93E1BF0502B002D6472 /* WXApiObject.h */,
@@ -1421,6 +1445,11 @@
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 83RB65GC8D;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					B3224A6B1B983D8800696D66 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -2023,6 +2052,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = "广汽丽新.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 83RB65GC8D;
@@ -2034,6 +2064,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DriverProject/SDKExport",
+					"$(PROJECT_DIR)/DriverProject/SDKExport/UMessage_Sdk_1.5.0a",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
@@ -2092,6 +2123,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = NO;
+				CODE_SIGN_ENTITLEMENTS = "广汽丽新.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 83RB65GC8D;
@@ -2103,6 +2135,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DriverProject/SDKExport",
+					"$(PROJECT_DIR)/DriverProject/SDKExport/UMessage_Sdk_1.5.0a",
 				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
