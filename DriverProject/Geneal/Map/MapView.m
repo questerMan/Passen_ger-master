@@ -1,4 +1,4 @@
-//
+    //
 //  MapView.m
 //  DriverProject
 //
@@ -426,9 +426,9 @@ updatingLocation:(BOOL)updatingLocation
         NSString *address1 = response.regeocode.addressComponent.neighborhood?:@"";//社区
         NSString *address2 = response.regeocode.addressComponent.streetNumber.street?:@"";//街道
         NSString *address3 = response.regeocode.addressComponent.streetNumber.number?:@"";//门牌号
-        NSArray  *pois      = response.regeocode.pois;
+        NSArray  *pois  = response.regeocode.pois;
         _pois = pois;
-        NSLog(@"address_daolu:%@,%@,距离:%f公里", address2,address3);
+//        NSLog(@"address_daolu:%@,%@,距离:%f公里", address2,address3);
         NSLog(@"address0:%@", address0);
         _mapView.delegate = self;
         if (pois.count == 0 && address0.length == 0) {

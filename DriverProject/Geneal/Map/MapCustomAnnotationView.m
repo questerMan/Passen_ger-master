@@ -150,20 +150,17 @@
     switch (self.rideState) {
         case RideStartState:
             [self.calloutView autoStretchWidth];
-            self.calloutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,
-                                                  -CGRectGetHeight(self.calloutView.bounds) / 2.f + self.calloutOffset.y);
+            self.calloutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,-CGRectGetHeight(self.calloutView.bounds) / 2.f + self.calloutOffset.y);
             break;
         case RideWaitingState:
         case RideArriveState:
             [self.watingoutView autoStretchWidth];
-            self.watingoutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,
-                                                  -CGRectGetHeight(self.watingoutView.bounds) / 2.f + self.calloutOffset.y);
+            self.watingoutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,-CGRectGetHeight(self.watingoutView.bounds) / 2.f + self.calloutOffset.y);
             break;
 
         case RideDrivingState:
             [self.drivingoutView autoStretchWidth];
-            self.drivingoutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,
-                                                  -CGRectGetHeight(self.drivingoutView.bounds) / 2.f + self.calloutOffset.y);
+            self.drivingoutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x,-CGRectGetHeight(self.drivingoutView.bounds) / 2.f + self.calloutOffset.y);
             break;
             
         default:

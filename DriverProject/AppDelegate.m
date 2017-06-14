@@ -39,7 +39,7 @@
     
 //    UIView * bgView = [[UIView alloc] init];
 //    bgView.backgroundColor = [UIColor whiteColor];
-//    bgView.frame = CGRectMake(0, 0, SCREEN_W, SCREEN_H);
+//    bgView.frame = CGRectMake(0, 0, SCREEN_W, S   CREEN_H);
 //    [frostedViewController.view addSubview:bgView];
 //    
 //    UIImageView* launchImage1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"launchImage1"]];

@@ -88,14 +88,22 @@
     [_subTitleLable autoStretchWidth];
     CGFloat width;
     if (_titleLable.frame.size.width > _subTitleLable.frame.size.width) {
+        if (_titleLable.frame.size.width > (SCREEN_W - MATCHSIZE(20))) {
+            _titleLable.width = SCREEN_W - MATCHSIZE(100);
+        }
         width = _titleLable.frame.size.width;
     }else {
+        if (_subTitleLable.frame.size.width > (SCREEN_W - MATCHSIZE(20))) {
+            _subTitleLable.width = SCREEN_W - MATCHSIZE(100);
+        }
         width = _subTitleLable.frame.size.width;
     }
+    
     self.frame  = CGRectMake(self.frame.origin.x, self.frame.origin.y, width+40, _titleLable.frame.size.height+_subTitleLable.frame.size.height+30);
     _arrow.center = CGPointMake(self.frame.size.width -15, self.frame.size.height/2-5);
     [self setNeedsDisplay];
 }
+
 - (void)setTitle:(NSString *)title
 {
     _titleLable.text = [NSString stringWithFormat:@"%@",title];
