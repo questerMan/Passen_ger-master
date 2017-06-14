@@ -19,7 +19,7 @@
     [requestDict setObject:phone forKey:@"phone"];
     [requestDict setObject:password forKey:@"password"];
     [requestDict setObject:code forKey:@"vcode"];
-    
+
     NSString *poatURL=[NSString stringWithFormat:@"%@/common/regist?",SEVER_API];
     
     
@@ -36,7 +36,7 @@
     NSMutableDictionary* requestDict = [NSMutableDictionary dictionary];
     [requestDict setObject:phone forKey:@"phone"];
     [requestDict setObject:password forKey:@"password"];
-    
+    [UIFactory getSignDictionary];
     //    [requestDict setObject:@"15218817202" forKey:@"phone"];
     //    [requestDict setObject:@"111111" forKey:@"password"];
     NSString *poatURL=[NSString stringWithFormat:@"%@/common/login?",SEVER_API];
