@@ -115,8 +115,7 @@
                            stringByReplacingOccurrencesOfString: @" " withString: @""];
     [UIFactory SaveNSUserDefaultsWithData:newDToken AndKey:@"deviceToken"];
     NSLog(@"%@",newDToken);
-    
-    
+
 }
 
 #pragma - mark REFrostedViewController Delegate
