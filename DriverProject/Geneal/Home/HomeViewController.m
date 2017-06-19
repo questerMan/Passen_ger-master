@@ -452,7 +452,7 @@
 {
     NSLog(@"%@",dataDic);
     NSData *userData = [NSKeyedArchiver archivedDataWithRootObject:dataDic];
-    [UIFactory DeleteAllNSUserDefaults];
+    [UIFactory DeleteAllSaveTokenNSUserDefaults];
     
     [UIFactory SaveNSUserDefaultsWithData:userData AndKey:@"userData"];
     [UIFactory SaveNSUserDefaultsWithData:[dataDic objectForKey:@"access_token"] AndKey:@"access_token"];
@@ -660,7 +660,7 @@
         NSLog(@"获取用户资料失败：%@",[response objectForKey:@"message"]);
         
         if ([[response objectForKey:@"code"] intValue] == 102 || [[response objectForKey:@"message"] isEqualToString:@"无效的授权资料"]) {
-            [UIFactory DeleteAllNSUserDefaults];
+            [UIFactory DeleteAllSaveTokenNSUserDefaults];
         }
     }
     

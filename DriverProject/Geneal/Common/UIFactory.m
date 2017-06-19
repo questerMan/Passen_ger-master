@@ -125,7 +125,7 @@
     return table;
 }
 
-+(void)SaveNSUserDefaultsWithData:(id)data AndKey:(NSString *)key
++ (void)SaveNSUserDefaultsWithData:(id)data AndKey:(NSString *)key
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
@@ -150,6 +150,20 @@
         [userDefatluts synchronize];
     }
 }
+
++ (void)DeleteAllSaveTokenNSUserDefaults{
+    NSString* deviceToken = [self getNSUserDefaultsDataWithKey:@"deviceToken"];
+    
+    NSUserDefaults *userDefatluts = [NSUserDefaults standardUserDefaults];
+    NSDictionary *dictionary = [userDefatluts dictionaryRepresentation];
+    for(NSString* key in [dictionary allKeys]){
+        [userDefatluts removeObjectForKey:key];
+        [userDefatluts synchronize];
+    }
+    
+    [self SaveNSUserDefaultsWithData:deviceToken AndKey:@"deviceToken"];
+}
+
 
 +(id)getNSUserDefaultsDataWithKey:(NSString *)key
 {
@@ -200,17 +214,17 @@
     return (NSString *)[userDefaults objectForKey:@"access_token"];
 }
 
-+(NSDictionary *)getSignDictionary
++(NSDictionary *)getSignDictionaryAndPhone:(NSString *)phone password:(NSString *)password vcode:(NSString *)code
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
+    NSString* deviceToken = [UIFactory getNSUserDefaultsDataWithKey:@"deviceToken"];
     NSString *signTemp;
     if ([userDefaults objectForKey:@"access_token"] && ![[userDefaults objectForKey:@"access_token"] isEqualToString:NULL_DATA]) {
         
-        signTemp = [[NSString stringWithFormat:@"phoneid%@pvc%@timestamp%ldua%@%@",[OpenUDID value],PVC_VALUE,(long)[[NSDate  date] timeIntervalSince1970],UA_VLAUE,[userDefaults objectForKey:@"access_token"]] uppercaseString];
+        signTemp = [[NSString stringWithFormat:@"password%@phone%@phoneid%@pvc%@timestamp%ldua%@vcode%@%@",password,phone,deviceToken,PVC_VALUE,(long)[[NSDate  date] timeIntervalSince1970],UA_VLAUE,code,[userDefaults objectForKey:@"access_token"]] uppercaseString];
     }else{
         
-        signTemp = [[NSString stringWithFormat:@"phoneid%@pvc%@timestamp%ldua%@",[OpenUDID value],PVC_VALUE,(long)[[NSDate  date] timeIntervalSince1970],UA_VLAUE] uppercaseString];
+        signTemp = [[NSString stringWithFormat:@"password%@phone%@phoneid%@pvc%@timestamp%ldua%@vcode%@",password,phone,deviceToken,PVC_VALUE,(long)[[NSDate  date] timeIntervalSince1970],UA_VLAUE,code] uppercaseString];
     }
     
     const char *cStr = [[signTemp uppercaseString] UTF8String];
@@ -224,7 +238,7 @@
     NSString *sign = result;
     
     NSString *timestamp = [NSString stringWithFormat:@"%ld",(long)[[NSDate  date] timeIntervalSince1970]];
-    NSDictionary *signDic = [NSDictionary dictionaryWithObjectsAndKeys:[OpenUDID value],@"phoneid",PVC_VALUE,@"pvc",timestamp,@"timestamp",UA_VLAUE,@"ua",sign,@"sign", nil];
+    NSDictionary *signDic = [NSDictionary dictionaryWithObjectsAndKeys:password,@"password",code,@"vcode",sign,@"sign",UA_VLAUE,@"ua",phone,@"phone",deviceToken,@"phoneid",timestamp,@"timestamp",PVC_VALUE,@"pvc", nil];
     
     NSLog(@"签名字典：%@",signDic);
     

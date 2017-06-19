@@ -74,6 +74,11 @@
 +(void)DeleteAllNSUserDefaults;
 
 /**
+ *  清空NSUserDefaults保存token
+ */
++(void)DeleteAllSaveTokenNSUserDefaults;
+
+/**
  *  获取指定的NSUserDefaults中保存的值
  *
  *  @param key key
@@ -110,7 +115,7 @@
 +(NSString *)theAccess_Token;
 
 //获取签名验证信息
-+(NSDictionary *)getSignDictionary;
++(NSDictionary *)getSignDictionaryAndPhone:(NSString *)phone password:(NSString *)password vcode:(NSString *)code;
 
 //获取用户名
 +(NSString *)theUserName;

@@ -220,7 +220,7 @@
 {
     NSLog(@"%@",dataDic);
     NSData *userData = [NSKeyedArchiver archivedDataWithRootObject:dataDic];
-    [UIFactory DeleteAllNSUserDefaults];
+    [UIFactory DeleteAllSaveTokenNSUserDefaults];
     
     [UIFactory SaveNSUserDefaultsWithData:userData AndKey:@"userData"];
     [UIFactory SaveNSUserDefaultsWithData:[dataDic objectForKey:@"access_token"] AndKey:@"access_token"];

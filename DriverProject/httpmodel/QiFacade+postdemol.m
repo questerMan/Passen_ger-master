@@ -16,10 +16,21 @@
 {
     
     NSMutableDictionary* requestDict = [NSMutableDictionary dictionary];
-    [requestDict setObject:phone forKey:@"phone"];
-    [requestDict setObject:password forKey:@"password"];
-    [requestDict setObject:code forKey:@"vcode"];
-
+    
+    [requestDict setValuesForKeysWithDictionary:[UIFactory getSignDictionaryAndPhone:phone password:password vcode:code]];
+    //    [requestDict setObject:phone forKey:@"phone"];
+    //    [requestDict setObject:password forKey:@"password"];
+    //    [requestDict setObject:code forKey:@"vcode"];
+    
+    //    NSMutableDictionary* tempDict = [NSMutableDictionary dictionary];
+    //    [tempDict setValuesForKeysWithDictionary:[UIFactory getSignDictionaryAndPhone:phone password:password vcode:code]];
+    //    NSString* deviceToken = [UIFactory getNSUserDefaultsDataWithKey:@"deviceToken"];
+    //    [tempDict setObject:deviceToken forKey:@"phoneid"];
+    //    [requestDict setValuesForKeysWithDictionary:tempDict];
+//    [requestDict setObject:phone forKey:@"phone"];
+//    [requestDict setObject:password forKey:@"password"];
+//    [requestDict setObject:code forKey:@"vcode"];
+    
     NSString *poatURL=[NSString stringWithFormat:@"%@/common/regist?",SEVER_API];
     
     
@@ -36,7 +47,7 @@
     NSMutableDictionary* requestDict = [NSMutableDictionary dictionary];
     [requestDict setObject:phone forKey:@"phone"];
     [requestDict setObject:password forKey:@"password"];
-    [UIFactory getSignDictionary];
+//    [UIFactory getSignDictionary];
     //    [requestDict setObject:@"15218817202" forKey:@"phone"];
     //    [requestDict setObject:@"111111" forKey:@"password"];
     NSString *poatURL=[NSString stringWithFormat:@"%@/common/login?",SEVER_API];
@@ -168,6 +179,9 @@
     [requestDict setObject:ori_lat forKey:@"ori_lat"];
     [requestDict setObject:ori_lon forKey:@"ori_lon"];
     //    [requestDict setObject:@"15218817202" forKey:@"phone"];
+    
+    [requestDict setObject:[UIFactory getNSUserDefaultsDataWithKey:@"deviceToken"] forKey:@"phoneid"];
+    [requestDict setObject:UA_VLAUE forKey:@"ua"];
     NSLog(@"呼叫专车参数:\n%@",requestDict);
     NSString *poatURL=[NSString stringWithFormat:@"%@/order?",SEVER_API];
     
