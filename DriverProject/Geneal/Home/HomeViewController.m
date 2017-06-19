@@ -149,7 +149,22 @@
     self.HUDView.labelText = @"获取个人信息中...";
     [self.view addSubview:self.HUDView];
     
+    
+    //接收推送点击通知刷新界面
+    [self crateNotification];
 
+}
+- (void)crateNotification
+{
+    //获取通知中心单例对象
+    NSNotificationCenter * center = [NSNotificationCenter defaultCenter];
+    //添加当前类对象为一个观察者，name和object设置为nil，表示接收一切通知
+    [center addObserver:self selector:@selector(refreshData) name:@"NEWS_REFRESH" object:nil];
+}
+//通知中心不会保留（retain）监听器对象，在通知中心注册过的对象，必须在该对象释放前取消注册。否则，当相应的通知再次出现时，通知中心仍然会向该监听器发送消息。因为相应的监听器对象已经被释放了，所以可能会导致应用崩溃
+- (void)dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 -(void)viewWillAppear:(BOOL)animated
