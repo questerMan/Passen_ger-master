@@ -255,6 +255,9 @@
         [UMessage setAutoAlert:NO];
         //必须加这句代码
         [UMessage didReceiveRemoteNotification:userInfo];
+        if ([[userInfo objectForKey:@"type"] isEqualToString:@"orderAccept"] || [[userInfo objectForKey:@"type"] isEqualToString:@"orderSetoff"] ) {
+            [self crateNotificationWithDic:userInfo];
+        }
         
     }else{
         //应用处于前台时的本地推送接受
