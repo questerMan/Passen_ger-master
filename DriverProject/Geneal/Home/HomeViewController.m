@@ -596,9 +596,9 @@
 }
 
 #pragma - mark 网络请求回调
--(void)requestFinished:(NSDictionary *)response tag:(NSInteger)iRequestTag
+- (void)requestFinished:(NSDictionary *)response tag:(NSInteger)iRequestTag
 {
-   //[self dismissLoading];
+    //[self dismissLoading];
     [self.HUDView hide:YES];
     if (_flag != 0 && response != nil && iRequestTag == _flag) {
         NSLog(@"获取用户资料成功\n%@",response);
@@ -654,10 +654,9 @@
         NSLog(@"费用预估：%@",response);
         NSString *cost = [[response objectForKey:@"data"] objectForKey:@"fee"];
         mapView.rModel.cost = [NSString stringWithFormat:@"%@",cost];
-        mapView.rModel.preferential = [[response objectForKey:@"data"]objectForKey:@"reduce_fee"];
-        _confirmListView.cost       = [NSString stringWithFormat:@"预估费用(%@元)",cost];
+        mapView.rModel.preferential = [[response objectForKey:@"data"] objectForKey:@"reduce_fee"];
+        _confirmListView.cost = [NSString stringWithFormat:@"预估费用(%@元)",cost];
     }
-    
 }
 
 -(void)requestFailed:(NSDictionary *)response tag:(NSInteger)iRequestTag
