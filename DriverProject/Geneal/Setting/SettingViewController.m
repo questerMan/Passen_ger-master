@@ -41,7 +41,7 @@
 //    self.navigationItem.leftBarButtonItem = leftitem;
 
     settingFirstArray = [NSArray arrayWithObjects:@"给专车好评",@"给我们提点建议", nil];
-    settingSecondArray = [NSArray arrayWithObjects:@"用户协议",@"联系我们",[NSString stringWithFormat:@"当前版本%@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]], nil];
+    settingSecondArray = [NSArray arrayWithObjects:@"用户协议",@"联系我们",[NSString stringWithFormat:@"当前版本:%@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]], nil];
     imgFirstArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"emoticon_draygray"],[UIImage imageNamed:@"chat_darkgray"], nil];
     imgSecongArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"help_outline"],[UIImage imageNamed:@"call_darkgray"],[UIImage imageNamed:@"refresh"], nil];
     
@@ -85,7 +85,7 @@
     [settingTab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(logoImg.mas_bottom).offset(45);
         make.left.and.right.equalTo(self.view);
-        make.height.mas_equalTo(@210);
+        make.height.mas_equalTo(@260);
     }];
 }
 
@@ -116,7 +116,7 @@
     if (section == 0) {
         return 2;
     }else{
-        return 2;
+        return 3;
     }
     return 0;
 }
@@ -186,7 +186,7 @@
             webView.title = @"用户协议";
             [self.navigationController pushViewController:webView animated:YES];
             
-        }else{
+        }else if(indexPath.row == 1){
             //联系我们
 //            WebViewController *webView = [[WebViewController alloc]init];
 //            webView.webURL = CONTACT_APT;
