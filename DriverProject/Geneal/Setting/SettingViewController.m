@@ -41,9 +41,9 @@
 //    self.navigationItem.leftBarButtonItem = leftitem;
     
     settingFirstArray = [NSArray arrayWithObjects:@"给专车好评",@"给我们提点建议", nil];
-    settingSecondArray = [NSArray arrayWithObjects:@"使用帮助",@"联系我们", nil];
+    settingSecondArray = [NSArray arrayWithObjects:@"使用帮助",@"联系我们",@"当前版本:", nil];
     imgFirstArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"emoticon_draygray"],[UIImage imageNamed:@"chat_darkgray"], nil];
-    imgSecongArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"help_outline"],[UIImage imageNamed:@"call_darkgray"], nil];
+    imgSecongArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"help_outline"],[UIImage imageNamed:@"call_darkgray"],[UIImage imageNamed:@"refresh"], nil];
     
     isFirst = YES;
     
@@ -85,7 +85,7 @@
     [settingTab mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(logoImg.mas_bottom).offset(45);
         make.left.and.right.equalTo(self.view);
-        make.height.mas_equalTo(@210);
+        make.height.mas_equalTo(@410);
     }];
 }
 
@@ -116,7 +116,7 @@
     if (section == 0) {
         return 2;
     }else{
-        return 2;
+        return 3;
     }
     return 0;
 }
@@ -150,7 +150,7 @@
         cell.showTopSeperateLine = NO;
     }
     
-    if (indexPath.section == 0 && indexPath.row == 1) {
+    if (indexPath.section == 0 && indexPath.row == 1 ) {
         cell.isShow = @"show";
     }
     
