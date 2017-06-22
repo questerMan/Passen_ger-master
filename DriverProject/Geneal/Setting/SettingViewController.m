@@ -39,11 +39,11 @@
 //    
 //    UIBarButtonItem *leftitem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
 //    self.navigationItem.leftBarButtonItem = leftitem;
-    
+
     settingFirstArray = [NSArray arrayWithObjects:@"给专车好评",@"给我们提点建议", nil];
-    settingSecondArray = [NSArray arrayWithObjects:@"使用帮助",@"联系我们", nil];
+    settingSecondArray = [NSArray arrayWithObjects:@"用户协议",@"联系我们",[NSString stringWithFormat:@"当前版本%@",[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]], nil];
     imgFirstArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"emoticon_draygray"],[UIImage imageNamed:@"chat_darkgray"], nil];
-    imgSecongArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"help_outline"],[UIImage imageNamed:@"call_darkgray"], nil];
+    imgSecongArray = [NSArray arrayWithObjects:[UIImage imageNamed:@"help_outline"],[UIImage imageNamed:@"call_darkgray"],[UIImage imageNamed:@"refresh"], nil];
     
     isFirst = YES;
     
@@ -108,7 +108,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -182,16 +182,17 @@
         if (indexPath.row == 0) {
             //使用帮助
             WebViewController *webView = [[WebViewController alloc]init];
-            webView.webURL = USER_MANUAL_API;
-            webView.title = @"使用帮助";
+            webView.webURL = USER_AGREEMENT_API;
+            webView.title = @"用户协议";
             [self.navigationController pushViewController:webView animated:YES];
             
         }else{
             //联系我们
-            WebViewController *webView = [[WebViewController alloc]init];
-            webView.webURL = CONTACT_APT;
-            webView.title = @"联系我们";
-            [self.navigationController pushViewController:webView animated:YES];
+//            WebViewController *webView = [[WebViewController alloc]init];
+//            webView.webURL = CONTACT_APT;
+//            webView.title = @"联系我们";
+//            [self.navigationController pushViewController:webView animated:YES];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",@"400-8228-846"]] options:@{} completionHandler:nil];
         }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
