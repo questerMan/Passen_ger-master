@@ -48,7 +48,6 @@
     isFirst = YES;
     
     [self createView];
-    
 }
 
 -(void)createView

@@ -438,7 +438,7 @@
         
         _outFlag = 0;
         
-        [[NSNotificationCenter defaultCenter]postNotificationName:NOTIFICATION_LOGIN_FAILURE object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_LOGIN_FAILURE object:nil];
         [UIFactory DeleteAllSaveTokenNSUserDefaults];
         [self.navigationController popToRootViewControllerAnimated:YES];
     }

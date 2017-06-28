@@ -152,6 +152,7 @@
     
     //接收推送点击通知刷新界面
     [self crateNotification];
+    
 
 }
 - (void)crateNotification

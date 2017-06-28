@@ -97,6 +97,7 @@ static SocketOne *sharedInstance = nil;
         return;
     }
 }
+
 //static int  KK=0;
 // 接收数据
 -(void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
@@ -136,7 +137,6 @@ static SocketOne *sharedInstance = nil;
 
 -(NSDictionary *)DicFromJson:(NSData *)response
 {
-
     NSError *error;
     NSDictionary *orderDic = [NSJSONSerialization JSONObjectWithData:response options:NSJSONReadingMutableLeaves error:&error];
     if (error != nil)
