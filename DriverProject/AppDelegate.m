@@ -105,6 +105,7 @@
     //打开日志，方便调试
     [UMessage setLogEnabled:YES];
 }
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     // 1.2.7版本开始不需要用户再手动注册devicetoken，SDK会自动注册
@@ -115,7 +116,6 @@
                            stringByReplacingOccurrencesOfString: @" " withString: @""];
     [UIFactory SaveNSUserDefaultsWithData:newDToken AndKey:@"deviceToken"];
     NSLog(@"%@",newDToken);
-
 }
 
 #pragma - mark REFrostedViewController Delegate
@@ -194,7 +194,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application{
     
-    UIApplication*   app = [UIApplication sharedApplication];
+    UIApplication* app = [UIApplication sharedApplication];
     __block    UIBackgroundTaskIdentifier bgTask;
     bgTask = [app beginBackgroundTaskWithExpirationHandler:^{
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -213,6 +213,7 @@
         });
     });
 }
+
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     [self crateNotificationWithDic:nil];
