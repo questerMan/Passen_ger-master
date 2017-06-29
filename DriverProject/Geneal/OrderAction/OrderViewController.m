@@ -673,7 +673,7 @@
             payView.driverDic = _driverDic;
             [self.navigationController pushViewController:payView animated:YES];
         }else{
-            [self.navigationController popViewControllerAnimated:YES];
+            [self.navigationController popToRootViewControllerAnimated:YES];
         }
         [[SocketOne sharedInstance]disconnect];
         [self.mapView mapAtUserLoction];
