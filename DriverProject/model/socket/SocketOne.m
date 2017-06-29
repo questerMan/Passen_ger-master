@@ -103,7 +103,9 @@ static SocketOne *sharedInstance = nil;
 -(void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag {
     NSDictionary *orderDic=[NSDictionary dictionaryWithDictionary:[self DicFromJson:data]];
     [self.socket readDataWithTimeout:timeout tag:0];
-    [self.delegate socketResponseWithData:orderDic];
+    if([self.delegate respondsToSelector:@selector(socketResponseWithData:)]){
+        [self.delegate socketResponseWithData:orderDic];
+    }
    
 //    KK++;
 //    if(KK==3)
