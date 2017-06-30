@@ -391,7 +391,9 @@
 -(void)submitTheSelectData
 {
     self.rideModel.carType = [NSString stringWithFormat:@"%ld",(long)_selectType];
+    if([self.costDelegate respondsToSelector:@selector(loadCostDataWith:carType:)]){
     [self.costDelegate loadCostDataWith:[NSString stringWithFormat:@"费用预估：%@%@",priceLabel.text,typeLabel.text] carType:self.rideModel.carType];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
