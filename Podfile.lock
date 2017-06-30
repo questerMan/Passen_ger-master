@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
   - AMap3DMap (2.6.1)
   - AMapCloudMap (1.2.0)
   - AMapSearch (2.6.0)
@@ -11,6 +26,7 @@ PODS:
   - REFrostedViewController (2.4.8)
 
 DEPENDENCIES:
+  - AFNetworking
   - AMap3DMap (~> 2.6.1)
   - AMapCloudMap (~> 1.2.0)
   - AMapSearch (~> 2.6.0)
@@ -23,6 +39,7 @@ DEPENDENCIES:
   - REFrostedViewController
 
 SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AMap3DMap: 9ddc896034f7b5b8e28848c8abf7488a37e2897e
   AMapCloudMap: dce3eb6d6a861fc90ac9c15ffdfa4b4301057d2a
   AMapSearch: 0ea3101eec4b9f500b53e33dcda30d343d41613b
@@ -34,4 +51,6 @@ SPEC CHECKSUMS:
   OpenUDID: e7cb6984c7304906ad20f3a36bf087b025896b6b
   REFrostedViewController: a893b4979ba1f200c547aef9ff4c3fd5a18f5923
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 514487c633fc47850173054c57425fadfab57226
+
+COCOAPODS: 1.2.1

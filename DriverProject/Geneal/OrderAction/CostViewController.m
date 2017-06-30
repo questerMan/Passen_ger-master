@@ -64,27 +64,39 @@
     }
     
     _cartypes = [UIFactory getNSUserDefaultsDataWithKey:@"carTypes"];
+    
     _selectType = [self.rideModel.carType integerValue];
     
-    switch (_selectType) {
-            
-        case 1:
-            typeString = [NSMutableString stringWithFormat:@"元（经济型）"];
-            break;
-            
-        case 2:
-            
-            typeString = [NSMutableString stringWithFormat:@"元（舒适型）"];
-            break;
-            
-        case 3:
-            
-            typeString = [NSMutableString stringWithFormat:@"元（商务型）"];
-            break;
-            
-        default:
-            break;
-    }
+    typeString = [NSMutableString stringWithFormat:@"元（%@）",[_cartypes objectAtIndex:_selectType - 1][@"name"]];
+    
+    
+    
+    
+//    switch (_selectType) {
+//            
+//        case 1:
+//            typeString = [NSMutableString stringWithFormat:@"元（经济型）"];
+//            break;
+//            
+//        case 2:
+//            
+//            typeString = [NSMutableString stringWithFormat:@"元（舒适型）"];
+//            break;
+//            
+//        case 3:
+//            
+//            typeString = [NSMutableString stringWithFormat:@"元（商务型）"];
+//            break;
+//        case 4:
+//            
+//            typeString = [NSMutableString stringWithFormat:@"元（豪华型）"];
+//            break;
+//            
+//        default:
+//            typeString = [NSMutableString stringWithFormat:@"元"];
+//
+//            break;
+//    }
     
     [self createCarTypeSelectView];
     
@@ -111,7 +123,7 @@
     NSLog(@"_cartypes:%@",_cartypes);
     for (int i = 0 ; i < _cartypes.count; i++) {
         int tag = [[[_cartypes objectAtIndex:i]objectForKey:@"type"] intValue];
-        NSString *name = [[_cartypes objectAtIndex:i]objectForKey:@"name"];
+        NSString *name = [[_cartypes objectAtIndex:i] objectForKey:@"name"];
         float spacing = self.view.frame.size.width/(_cartypes.count*2+1);
         float width = spacing+13;
         UIButton *cheapBtn = [UIFactory createTheCircleViewWithBorderColor:kUIColorFromRGB(0xf4942d) AndBorderWidth:0.5 WithTarget:self AndAction:@selector(selectCarTypeByView:) ByTag:tag];
