@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		041093981E8E4BC5007A8B58 /* newLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041093971E8E4BC5007A8B58 /* newLoginViewController.m */; };
 		0410939A1E8E54E2007A8B58 /* newLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041093971E8E4BC5007A8B58 /* newLoginViewController.m */; };
-		34667A1B52AA33F5E8C2A517 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 947EEF7D879EE9D22D6E8AF2 /* libPods.a */; };
+		184C8E7C5A530C59705FAAB8 /* libPods-广汽丽新.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32193193936E4E77DAEE0146 /* libPods-广汽丽新.a */; };
 		4619B1841BC3CDB300C3AA03 /* BaseAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4619B1831BC3CDB300C3AA03 /* BaseAlertView.m */; };
 		46BA25291BC236C0009F32D0 /* FETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BA25281BC236C0009F32D0 /* FETableViewCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		46BA256A1BC2392C009F32D0 /* about.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA253A1BC2392C009F32D0 /* about.png */; };
@@ -187,7 +187,7 @@
 		C01E90011BC40274002469DE /* BesaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07E20231B9BE28100EAF685 /* BesaViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90021BC40274002469DE /* InvoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013AD2C1BA853CF002701E5 /* InvoiceModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90031BC40274002469DE /* AddressSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C014999F1BB967DD00F6F896 /* AddressSelectController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		C01E90041BC40274002469DE /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C01E90041BC40274002469DE /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		C01E90051BC40274002469DE /* CommonPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B174F91BAAF06D00F71426 /* CommonPopView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90061BC40274002469DE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AE01B98500500696D66 /* SBJsonWriter.m */; };
 		C01E90071BC40274002469DE /* ConfirmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E030331BAEA0630092430E /* ConfirmListView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -212,14 +212,14 @@
 		C01E901A1BC40274002469DE /* UpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BA25691BC2392C009F32D0 /* UpdateAlertView.m */; };
 		C01E901B1BC40274002469DE /* TypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FFDBB51BAEDB810037F0C1 /* TypeModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E901C1BC40274002469DE /* TravelUiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AC77131BA1AF9E009B61EF /* TravelUiObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		C01E901D1BC40274002469DE /* (null) in Sources */ = {isa = PBXBuildFile; };
+		C01E901D1BC40274002469DE /* BuildFile in Sources */ = {isa = PBXBuildFile; };
 		C01E901E1BC40274002469DE /* DDSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACA1611BBAE62B0026C8A8 /* DDSearchManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E901F1BC40274002469DE /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224A831B983DB300696D66 /* ASIDataDecompressor.m */; };
 		C01E90201BC40274002469DE /* VariableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACA1581BBA3F980026C8A8 /* VariableView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90211BC40274002469DE /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07E20371B9C09CD00EAF685 /* MenuCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90221BC40274002469DE /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C062D9191BA55CCF0002FEA7 /* BaseModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90231BC40274002469DE /* NSString+json.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AED1B98512900696D66 /* NSString+json.m */; };
-		C01E90241BC40274002469DE /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C01E90241BC40274002469DE /* BuildFile in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90251BC40274002469DE /* NSString+Qi.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AF11B98512900696D66 /* NSString+Qi.m */; };
 		C01E90261BC40274002469DE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224A931B983DB300696D66 /* Reachability.m */; };
 		C01E90271BC40274002469DE /* MapSerachRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACA1651BBAE62B0026C8A8 /* MapSerachRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -233,7 +233,7 @@
 		C01E902F1BC40274002469DE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013AD331BA85B76002701E5 /* SettingViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90301BC40274002469DE /* PayController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C76C281BB1A2D600271B5A /* PayController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90311BC40274002469DE /* CCBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BA25671BC2392C009F32D0 /* CCBBaseViewController.m */; };
-		C01E90321BC40274002469DE /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C01E90321BC40274002469DE /* BuildFile in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90331BC40274002469DE /* NSString+QiEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AF31B98512900696D66 /* NSString+QiEncoding.m */; };
 		C01E90341BC40274002469DE /* ChooseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B5E4C1BB04307005C1EB6 /* ChooseController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90351BC40274002469DE /* QiHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AC01B983F8C00696D66 /* QiHttpRequest.m */; };
@@ -249,7 +249,6 @@
 		C01E903F1BC40274002469DE /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07E202A1B9BF49A00EAF685 /* HomeViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90401BC40274002469DE /* CouponCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C029C0C21BA5CC17000B0267 /* CouponCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90421BC40274002469DE /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3224A9D1B983E3F00696D66 /* libz.1.2.5.dylib */; };
-		C01E90431BC40274002469DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 947EEF7D879EE9D22D6E8AF2 /* libPods.a */; };
 		C01E90451BC40274002469DE /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C07BAAA11B9F15CC002ABD2E /* CustomCell.xib */; };
 		C01E90461BC40274002469DE /* mapbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA25561BC2392C009F32D0 /* mapbtn.png */; };
 		C01E90471BC40274002469DE /* warningtip.png in Resources */ = {isa = PBXBuildFile; fileRef = 46BA25631BC2392C009F32D0 /* warningtip.png */; };
@@ -357,6 +356,7 @@
 		C0FFDBB31BAEDAA50037F0C1 /* TypeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FFDBB21BAEDAA50037F0C1 /* TypeCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C0FFDBB61BAEDB810037F0C1 /* TypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FFDBB51BAEDB810037F0C1 /* TypeModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		CC2659FB1EE936E90076ED5D /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2659FA1EE936E90076ED5D /* Launch Screen.storyboard */; };
+		CC5AB2131F05ED27008B0EB6 /* IsNewWorkState.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5AB2121F05ED27008B0EB6 /* IsNewWorkState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -372,6 +372,7 @@
 /* Begin PBXFileReference section */
 		041093961E8E4BC5007A8B58 /* newLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newLoginViewController.h; sourceTree = "<group>"; };
 		041093971E8E4BC5007A8B58 /* newLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newLoginViewController.m; sourceTree = "<group>"; };
+		32193193936E4E77DAEE0146 /* libPods-广汽丽新.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-广汽丽新.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4619B1821BC3CDB300C3AA03 /* BaseAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAlertView.h; sourceTree = "<group>"; };
 		4619B1831BC3CDB300C3AA03 /* BaseAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseAlertView.m; sourceTree = "<group>"; };
 		46BA25271BC236C0009F32D0 /* FETableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FETableViewCell.h; sourceTree = "<group>"; };
@@ -424,13 +425,12 @@
 		46BA25671BC2392C009F32D0 /* CCBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBBaseViewController.m; sourceTree = "<group>"; };
 		46BA25681BC2392C009F32D0 /* UpdateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateAlertView.h; sourceTree = "<group>"; };
 		46BA25691BC2392C009F32D0 /* UpdateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateAlertView.m; sourceTree = "<group>"; };
-		63B0C45E109158722FEF0A72 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7CBF1C8271221375B394B5C6 /* Pods-广汽丽新.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-广汽丽新.debug.xcconfig"; path = "Pods/Target Support Files/Pods-广汽丽新/Pods-广汽丽新.debug.xcconfig"; sourceTree = "<group>"; };
 		827E3CB31EEFCC87000D755A /* libUMessage_Sdk_1.5.0a.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUMessage_Sdk_1.5.0a.a; sourceTree = "<group>"; };
 		827E3CB41EEFCC87000D755A /* UMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMessage.h; sourceTree = "<group>"; };
 		827E3CB61EEFCC9C000D755A /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		827E3CB81EEFCCC6000D755A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		827E3CBA1EEFCD45000D755A /* 广汽丽新.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "广汽丽新.entitlements"; sourceTree = "<group>"; };
-		947EEF7D879EE9D22D6E8AF2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3224A531B983D8700696D66 /* 广汽丽新.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "广汽丽新.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3224A571B983D8700696D66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3224A581B983D8700696D66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -682,8 +682,10 @@
 		C0FFDBB21BAEDAA50037F0C1 /* TypeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeCell.m; sourceTree = "<group>"; };
 		C0FFDBB41BAEDB810037F0C1 /* TypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TypeModel.h; sourceTree = "<group>"; };
 		C0FFDBB51BAEDB810037F0C1 /* TypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TypeModel.m; sourceTree = "<group>"; };
-		C6EB21C1E85FA57A986CF6F1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C9E89D8C0EE6872A7D443B93 /* Pods-广汽丽新.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-广汽丽新.release.xcconfig"; path = "Pods/Target Support Files/Pods-广汽丽新/Pods-广汽丽新.release.xcconfig"; sourceTree = "<group>"; };
 		CC2659FA1EE936E90076ED5D /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		CC5AB2111F05ED27008B0EB6 /* IsNewWorkState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IsNewWorkState.h; sourceTree = "<group>"; };
+		CC5AB2121F05ED27008B0EB6 /* IsNewWorkState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IsNewWorkState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -702,7 +704,7 @@
 				BFAF906D1BDE289F001A5F38 /* CoreLocation.framework in Frameworks */,
 				BFAF906B1BDE288E001A5F38 /* QuartzCore.framework in Frameworks */,
 				B3224A9E1B983E3F00696D66 /* libz.1.2.5.dylib in Frameworks */,
-				34667A1B52AA33F5E8C2A517 /* libPods.a in Frameworks */,
+				184C8E7C5A530C59705FAAB8 /* libPods-广汽丽新.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,13 +727,21 @@
 				BFAF907B1BDE34A5001A5F38 /* QuartzCore.framework in Frameworks */,
 				BFAF907A1BDE34A1001A5F38 /* CoreTelephony.framework in Frameworks */,
 				C01E90421BC40274002469DE /* libz.1.2.5.dylib in Frameworks */,
-				C01E90431BC40274002469DE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3455A3AF511A286897F31BE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CBF1C8271221375B394B5C6 /* Pods-广汽丽新.debug.xcconfig */,
+				C9E89D8C0EE6872A7D443B93 /* Pods-广汽丽新.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		46BA25261BC236AA009F32D0 /* FETableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,18 +846,9 @@
 				BFAF906C1BDE289F001A5F38 /* CoreLocation.framework */,
 				BFAF906A1BDE288E001A5F38 /* QuartzCore.framework */,
 				B3224A9D1B983E3F00696D66 /* libz.1.2.5.dylib */,
-				947EEF7D879EE9D22D6E8AF2 /* libPods.a */,
+				32193193936E4E77DAEE0146 /* libPods-广汽丽新.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		775563DBD1235F76ACC73EFD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				63B0C45E109158722FEF0A72 /* Pods.debug.xcconfig */,
-				C6EB21C1E85FA57A986CF6F1 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		827E3CB21EEFCC87000D755A /* UMessage_Sdk_1.5.0a */ = {
@@ -866,8 +867,8 @@
 				B3224A551B983D8700696D66 /* DriverProject */,
 				B3224A6F1B983D8800696D66 /* DriverProjectTests */,
 				B3224A541B983D8700696D66 /* Products */,
-				775563DBD1235F76ACC73EFD /* Pods */,
 				61A501473F6EF0D98165A372 /* Frameworks */,
+				3455A3AF511A286897F31BE6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -988,6 +989,8 @@
 		B3224ABE1B983F8C00696D66 /* Http */ = {
 			isa = PBXGroup;
 			children = (
+				CC5AB2111F05ED27008B0EB6 /* IsNewWorkState.h */,
+				CC5AB2121F05ED27008B0EB6 /* IsNewWorkState.m */,
 				B3224ABF1B983F8C00696D66 /* QiHttpRequest.h */,
 				B3224AC01B983F8C00696D66 /* QiHttpRequest.m */,
 				B3224AC11B983F8C00696D66 /* QiHttpRequestQueue.h */,
@@ -1379,12 +1382,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3224A761B983D8800696D66 /* Build configuration list for PBXNativeTarget "广汽丽新" */;
 			buildPhases = (
-				E109C213675382CCEC9E64D2 /* Check Pods Manifest.lock */,
+				8D5BAF516411AA8B78E67BC2 /* [CP] Check Pods Manifest.lock */,
 				B3224A4F1B983D8700696D66 /* Sources */,
 				B3224A501B983D8700696D66 /* Frameworks */,
 				B3224A511B983D8700696D66 /* Resources */,
-				6CD0E1D7292351391357D46C /* Copy Pods Resources */,
-				3835219AD8B5D8ED7C53467F /* Embed Pods Frameworks */,
+				AF58D6319E268739555B30C6 /* [CP] Embed Pods Frameworks */,
+				16791698AEE76642AE0265BC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1417,11 +1420,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01E90771BC40274002469DE /* Build configuration list for PBXNativeTarget "广汽丽新 copy" */;
 			buildPhases = (
-				C01E8FD81BC40274002469DE /* Check Pods Manifest.lock */,
 				C01E8FD91BC40274002469DE /* Sources */,
 				C01E90411BC40274002469DE /* Frameworks */,
 				C01E90441BC40274002469DE /* Resources */,
-				C01E90761BC40274002469DE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1601,79 +1602,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3835219AD8B5D8ED7C53467F /* Embed Pods Frameworks */ = {
+		16791698AEE76642AE0265BC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-广汽丽新/Pods-广汽丽新-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6CD0E1D7292351391357D46C /* Copy Pods Resources */ = {
+		8D5BAF516411AA8B78E67BC2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		C01E8FD81BC40274002469DE /* Check Pods Manifest.lock */ = {
+		AF58D6319E268739555B30C6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C01E90761BC40274002469DE /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E109C213675382CCEC9E64D2 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-广汽丽新/Pods-广汽丽新-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1704,6 +1675,7 @@
 				BFACA1681BBAE62B0026C8A8 /* DDSearchViewController.m in Sources */,
 				BFACA1481BB4F4EB0026C8A8 /* MapView.m in Sources */,
 				B3224AD11B98450100696D66 /* QiFacade+getmodel.m in Sources */,
+				CC5AB2131F05ED27008B0EB6 /* IsNewWorkState.m in Sources */,
 				C09571A01BB2FC41004F2067 /* RegisterController.m in Sources */,
 				C049F7C01BAC478E002DBDC0 /* UserInfoUIObject.m in Sources */,
 				B3224A941B983DB300696D66 /* ASIAuthenticationDialog.m in Sources */,
@@ -1868,7 +1840,7 @@
 				C01E90011BC40274002469DE /* BesaViewController.m in Sources */,
 				C01E90021BC40274002469DE /* InvoiceModel.m in Sources */,
 				C01E90031BC40274002469DE /* AddressSelectController.m in Sources */,
-				C01E90041BC40274002469DE /* (null) in Sources */,
+				C01E90041BC40274002469DE /* BuildFile in Sources */,
 				C01E90051BC40274002469DE /* CommonPopView.m in Sources */,
 				C01E90061BC40274002469DE /* SBJsonWriter.m in Sources */,
 				C01E90071BC40274002469DE /* ConfirmListView.m in Sources */,
@@ -1893,14 +1865,14 @@
 				C01E901A1BC40274002469DE /* UpdateAlertView.m in Sources */,
 				C01E901B1BC40274002469DE /* TypeModel.m in Sources */,
 				C01E901C1BC40274002469DE /* TravelUiObject.m in Sources */,
-				C01E901D1BC40274002469DE /* (null) in Sources */,
+				C01E901D1BC40274002469DE /* BuildFile in Sources */,
 				C01E901E1BC40274002469DE /* DDSearchManager.m in Sources */,
 				C01E901F1BC40274002469DE /* ASIDataDecompressor.m in Sources */,
 				C01E90201BC40274002469DE /* VariableView.m in Sources */,
 				C01E90211BC40274002469DE /* MenuCell.m in Sources */,
 				C01E90221BC40274002469DE /* BaseModel.m in Sources */,
 				C01E90231BC40274002469DE /* NSString+json.m in Sources */,
-				C01E90241BC40274002469DE /* (null) in Sources */,
+				C01E90241BC40274002469DE /* BuildFile in Sources */,
 				C01E90251BC40274002469DE /* NSString+Qi.m in Sources */,
 				C01E90261BC40274002469DE /* Reachability.m in Sources */,
 				C01E90271BC40274002469DE /* MapSerachRequest.m in Sources */,
@@ -1914,7 +1886,7 @@
 				C01E902F1BC40274002469DE /* SettingViewController.m in Sources */,
 				C01E90301BC40274002469DE /* PayController.m in Sources */,
 				C01E90311BC40274002469DE /* CCBBaseViewController.m in Sources */,
-				C01E90321BC40274002469DE /* (null) in Sources */,
+				C01E90321BC40274002469DE /* BuildFile in Sources */,
 				C0C47DF01BD3673F00E69420 /* SettingCell.m in Sources */,
 				C01E90331BC40274002469DE /* NSString+QiEncoding.m in Sources */,
 				C01E90341BC40274002469DE /* ChooseController.m in Sources */,
@@ -2046,7 +2018,7 @@
 		};
 		B3224A771B983D8800696D66 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B0C45E109158722FEF0A72 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7CBF1C8271221375B394B5C6 /* Pods-广汽丽新.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2117,7 +2089,7 @@
 		};
 		B3224A781B983D8800696D66 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6EB21C1E85FA57A986CF6F1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = C9E89D8C0EE6872A7D443B93 /* Pods-广汽丽新.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2241,7 +2213,6 @@
 		};
 		C01E90781BC40274002469DE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B0C45E109158722FEF0A72 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2307,7 +2278,6 @@
 		};
 		C01E90791BC40274002469DE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6EB21C1E85FA57A986CF6F1 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

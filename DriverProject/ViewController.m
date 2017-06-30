@@ -44,7 +44,6 @@
     NSInteger takeOutMoneyFlag= [facade DeleteTest];
     NSLog(@"takeOutMoneyFlag=%d",takeOutMoneyFlag);
     [facade addHttpObserver:self tag:takeOutMoneyFlag];
-
 }
 
 - (void)requestFinished:(NSDictionary*)response tag:(NSInteger)iRequestTag

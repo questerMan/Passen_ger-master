@@ -14,7 +14,9 @@
 #import "SocketOne.h"
 #import "WXApi.h"
 #import "UMessage.h"
+#import <AFNetworking/AFNetworking.h>
 #import <UserNotifications/UserNotifications.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 #define WXPAY_URL_SCHEME @"wx9cad54f0db833982" //微信支付URL
 #define UM_KEY @"wx9cad54f0db833982"//友盟Key
 @interface AppDelegate ()<WXApiDelegate,UNUserNotificationCenterDelegate>
@@ -75,12 +77,58 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
 
-    
+    //启动监测网络状态
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(networkChange:) name:AFNetworkingReachabilityDidChangeNotification object:nil];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 #pragma mark - 添加注册友盟
     [self initUM:launchOptions];
     
     return YES;
 }
+
+#pragma mark - - 网络变化
+- (void)networkChange:(NSNotification *)networkChnageNoti
+{
+    NSLog(@"网络变化%@",networkChnageNoti.userInfo);
+    
+    NSInteger networkStatu = [[networkChnageNoti.userInfo objectForKey:@"AFNetworkingReachabilityNotificationStatusItem"] integerValue];
+    
+    switch (networkStatu) {
+        case AFNetworkReachabilityStatusUnknown:
+            [self showTextOnlyWith:@"未识别的网络"];
+            NSLog(@"未识别的网络");
+            break;
+            
+        case AFNetworkReachabilityStatusNotReachable:
+            [self showTextOnlyWith:@"无网络状态"];
+            NSLog(@"不可达的网络(未连接)");
+            break;
+            
+        case AFNetworkReachabilityStatusReachableViaWWAN:
+            [self crateNotificationWithDic:nil];
+            NSLog(@"2G,3G,4G...的网络");
+            break;
+            
+        case AFNetworkReachabilityStatusReachableViaWiFi:
+            [self crateNotificationWithDic:nil];
+            NSLog(@"wifi的网络");
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)showTextOnlyWith:(NSString *)text
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+    hud.mode = MBProgressHUDModeText;
+    hud.labelText = text;
+    hud.margin = 10.f;
+    hud.removeFromSuperViewOnHide = YES;
+    
+    [hud hide:YES afterDelay:3];
+}
+
 
 #pragma mark - 添加注册友盟
 -(void)initUM:(NSDictionary *)launchOptions{
