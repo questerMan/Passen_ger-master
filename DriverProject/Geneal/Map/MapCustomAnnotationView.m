@@ -84,7 +84,7 @@
                     
                     self.watingoutView.center = CGPointMake(CGRectGetWidth(self.bounds) / 2.f + self.calloutOffset.x, CGRectGetHeight(self.watingoutView.bounds) / 2.f + self.calloutOffset.y);
                 }
-                self.watingoutView.title = [NSString stringWithFormat:@"司机已到达"];
+                self.watingoutView.title = [NSString stringWithFormat:@"车辆已到达"];
                 [self addSubview:self.watingoutView];
                 
             }

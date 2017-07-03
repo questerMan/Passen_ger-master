@@ -42,7 +42,7 @@
 - (void)setTitle:(NSString *)title
 {
     _title = title;
-    NSString *ti = @"司机已到达";
+    NSString *ti = @"车辆已到达";
     if (![title isEqualToString:ti]) {
         NSRange range = [title rangeOfString:@"/"];
         if (range.length) {

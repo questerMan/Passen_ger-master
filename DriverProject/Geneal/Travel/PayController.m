@@ -168,11 +168,11 @@
         make.center.equalTo(headerView);
         make.height.equalTo(headerView.mas_height).multipliedBy(0.5f);
         //make.width.equalTo(headerView.mas_width).multipliedBy(0.12f);
-        make.width.mas_equalTo(@55);
+//        make.width.mas_equalTo(@200);
     }];
     
     [tips mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(amount.mas_left);
+        make.right.equalTo(amount.mas_left).offset(MATCHSIZE(-50));
         make.bottom.equalTo(amount.mas_bottom);
         make.size.mas_equalTo(CGSizeMake(20, 20));
     }];

@@ -140,11 +140,11 @@
     [self.amountLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(logoLabel.mas_bottom).offset(10);
         make.centerX.equalTo(self.bgView);
-        make.size.mas_equalTo(CGSizeMake(60, 30));
+//        make.size.mas_equalTo(CGSizeMake(60, 30));
     }];
     
     [tips mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.amountLabel.mas_left);
+        make.right.equalTo(self.amountLabel.mas_left).offset(MATCHSIZE(-50));
         make.bottom.equalTo(self.amountLabel.mas_bottom);
         make.size.mas_equalTo(CGSizeMake(20, 20));
     }];

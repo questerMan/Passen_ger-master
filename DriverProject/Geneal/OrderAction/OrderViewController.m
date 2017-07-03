@@ -216,7 +216,7 @@
         NSLog(@"接单:%@",dataDic);
         self.ordermodel.orderState = ORDER_STATUS_B;
         if (self.ordermodel.newOrder) {//新单需要获取司机信息
-            self.driModel = [[driverModel alloc]init];
+            self.driModel = [[driverModel alloc] init];
             self.driModel.dirverID = [NSString stringWithFormat:@"%@",[dataDic objectForKey:@"driver_id"]];
             [self getDriverDic];
         }
@@ -402,7 +402,7 @@
                 [self.mapView.rModel computationalDistanceAndTime:self.mapView.rModel.startLocation endLocation:driverLocation successBlock:^(float distance, float duration) {
                     //self.mapView.annotationView.selected = YES;
                     NSLog(@"%.1f公里/%.0f分钟",distance,duration);
-                    self.mapView.annotationView.watingoutView.title = [NSString stringWithFormat:@"%.0f分钟",duration];
+                    self.mapView.annotationView.watingoutView.title = [NSString stringWithFormat:@"预计车辆%.0f分钟后到达",duration];
                     [self.mapView.annotationView automaticAlignment];
                 } failure:^{
                     self.mapView.annotationView.watingoutView.title = @"正在前往目的地";
@@ -418,12 +418,12 @@
         {
             self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@""] style:UIBarButtonItemStylePlain target:self action:@selector(oneClick)];
 
-            self.title = @"司机已到达";
+            self.title = @"车辆已到达";
             [self needsDispalyAnnotationView];
             _mapView.driveState = RideWaitingState;
             [self.mapView.annotationView setAnnotationRideState:RideWaitingState];
             if (self.mapView.annotationView.watingoutView) {
-                self.mapView.annotationView.watingoutView.title = @"司机已到达";
+                self.mapView.annotationView.watingoutView.title = @"车辆已到达";
                 [self.mapView.annotationView automaticAlignment];
             }
             if(cancelBtn.tag == 1001){
