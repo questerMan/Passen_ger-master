@@ -653,7 +653,7 @@
     if (_flagCost != 0 && response != nil && iRequestTag == _flagCost) {
         _flagCost = 0;
         NSLog(@"费用预估：%@",response);
-        NSString *cost = [[response objectForKey:@"data"] objectForKey:@"fee"];
+        NSString *cost = FAMAT_NUM([[response objectForKey:@"data"] objectForKey:@"fee"]);
         mapView.rModel.cost = [NSString stringWithFormat:@"%@",cost];
         mapView.rModel.preferential = [[response objectForKey:@"data"] objectForKey:@"reduce_fee"];
         _confirmListView.cost = [NSString stringWithFormat:@"预估费用(%@元)",cost];

@@ -473,6 +473,8 @@
 //线的高度
 #define LINE_HEIGHT   (1.0f/[[UIScreen mainScreen]scale])
 
+//规范小数点后两位
+#define FAMAT_NUM(a) [NSString stringWithFormat:@"%0.2f",[a doubleValue]]
 
 
 

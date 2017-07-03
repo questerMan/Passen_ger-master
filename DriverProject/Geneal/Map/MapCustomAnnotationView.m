@@ -141,7 +141,11 @@
 
 - (void)locationPushToSearchViewControler:(id)sender
 {
+    if ([self.annotationDelegate respondsToSelector:@selector(pushToSearchViewController:andAddress:)]) {
+    
     [self.annotationDelegate pushToSearchViewController:SearchStart  andAddress:self.rideModel.startAddress];
+        
+    }
 }
 
 - (void)automaticAlignment
