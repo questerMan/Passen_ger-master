@@ -76,7 +76,7 @@
 /**
  *  清空NSUserDefaults保存token
  */
-+(void)DeleteAllSaveTokenNSUserDefaults;
++(void)DeleteAllSaveDataNSUserDefaults;
 
 /**
  *  获取指定的NSUserDefaults中保存的值

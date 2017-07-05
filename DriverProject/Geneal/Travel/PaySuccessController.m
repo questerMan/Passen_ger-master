@@ -84,7 +84,7 @@
     self.paySuccessDic = [NSMutableDictionary dictionaryWithDictionary:dic];
     NSDictionary *driverDic = [dic objectForKey:@"driver"];
     //[NSDictionary dictionaryWithObjectsAndKeys:@"刘师傅",DRIVER_NAME_KEY,@"粤A**P45 大众辉腾",DRIVER_CAR_KEY,@"8",DRIVER_STAR_KEY,@"154单",DRIVER_ORDER_COUNT_KEY,@"18665751365",DRIVER_PHONE_NUMBER_KEY, nil];
-    CommonPopView *popView = [[CommonPopView alloc]initPopViewFrame:CGRectMake(0, 64, self.view.width, 80) AndDriverData:driverDic];
+    CommonPopView *popView = [[CommonPopView alloc] initPopViewFrame:CGRectMake(0, 64, self.view.width, 80) AndDriverData:driverDic];
     popView.popDelegate = self;
     [self.view addSubview:popView];
     

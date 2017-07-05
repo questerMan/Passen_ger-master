@@ -24,8 +24,6 @@
     return mapAtt;
 }
 
-
-
 -(void)setAttributes:(NSDictionary *)dataDic{
     
     //将字典的映射关系填充到当前的对象属性上

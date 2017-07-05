@@ -26,6 +26,7 @@
     NSInteger _clickCacel;
     NSInteger _flageDriver;
     NSDictionary  *_driverDic;
+//    NSDictionary  *_processDataDic;
     PayController *payView;
     UIButton *cancelBtn;
     CLLocationCoordinate2D driverLocation;
@@ -220,7 +221,6 @@
             self.driModel.dirverID = [NSString stringWithFormat:@"%@",[dataDic objectForKey:@"driver_id"]];
             [self getDriverDic];
         }
-        
     }
     else if([action isEqualToString:@"setoff"]){//发车
         NSLog(@"司机出车:%@",dataDic);
@@ -254,11 +254,17 @@
     else if([action isEqualToString:@"geton"]){
         NSLog(@"乘客上车:%@",dataDic);
         self.title = @"行程中";
-        driverLocation.latitude = [[dataDic objectForKey:@"lat"]floatValue];
-        driverLocation.longitude = [[dataDic objectForKey:@"lon"]floatValue];
+        driverLocation.latitude = [[dataDic objectForKey:@"lat"] floatValue];
+        driverLocation.longitude = [[dataDic objectForKey:@"lon"] floatValue];
+        
         NSString *fee = [dataDic objectForKey:@"fee"];
         NSString *km = [dataDic objectForKey:@"km"];
         NSString *min = [dataDic objectForKey:@"min"];
+        
+        [UIFactory SaveNSUserDefaultsWithData:fee AndKey:@"processfee"];
+        [UIFactory SaveNSUserDefaultsWithData:km AndKey:@"km"];
+        [UIFactory SaveNSUserDefaultsWithData:min AndKey:@"min"];
+        
         [self.mapView setAnnotationLoction:driverLocation manual:YES];//设置标注位置为司机的位置
         self.mapView.pointAnnotation.coordinate = driverLocation;
         
@@ -293,9 +299,14 @@
         NSString *fee = [dataDic objectForKey:@"fee"];
         NSString *km = [dataDic objectForKey:@"km"];
         NSString *min = [dataDic objectForKey:@"min"];
+        
+        [UIFactory SaveNSUserDefaultsWithData:fee AndKey:@"processfee"];
+        [UIFactory SaveNSUserDefaultsWithData:km AndKey:@"km"];
+        [UIFactory SaveNSUserDefaultsWithData:min AndKey:@"min"];
+        
         [self.mapView.annotationView setAnnotationRideState:RideDrivingState];
         if (self.mapView.annotationView.drivingoutView) {
-            self.mapView.annotationView.drivingoutView.title = [NSMutableString stringWithFormat:@"%@",fee];//@"28元";
+            self.mapView.annotationView.drivingoutView.title = [NSMutableString stringWithFormat:@"%@元",fee];//@"28元";
             self.mapView.annotationView.drivingoutView.subTitle = [NSMutableString stringWithFormat:@"%@公里/%@分钟",km,min];//@"1公里/2分钟";
             [self.mapView.annotationView.drivingoutView autoStretchWidth];
             [self.mapView.annotationView automaticAlignment];
@@ -348,9 +359,11 @@
 
     [self showCalloutByState];
 }
+
 -(void)oneClick{
     
 }
+
 - (void)showCalloutByState
 {
     
@@ -450,6 +463,19 @@
                 cancelBtn.tag = 1002;
                 [cancelBtn setTitle:@"投诉" forState:UIControlStateNormal];
             }
+            
+            
+            NSString* fee = [UIFactory getNSUserDefaultsDataWithKey:@"processfee"];
+            NSString* km = [UIFactory getNSUserDefaultsDataWithKey:@"km"];
+            NSString* min = [UIFactory getNSUserDefaultsDataWithKey:@"min"];
+            
+            if (self.mapView.annotationView.drivingoutView) {
+            self.mapView.annotationView.drivingoutView.title = [NSMutableString stringWithFormat:@"%@元",[UIFactory getNSUserDefaultsDataWithKey:@"processfee"]];//@"28元";
+            self.mapView.annotationView.drivingoutView.subTitle = [NSMutableString stringWithFormat:@"%@公里/%@分钟",[UIFactory getNSUserDefaultsDataWithKey:@"km"],[UIFactory getNSUserDefaultsDataWithKey:@"min"]];//@"1公里/2分钟";
+            [self.mapView.annotationView.drivingoutView autoStretchWidth];
+            [self.mapView.annotationView automaticAlignment];
+            }
+            
         }
             break;
         case ORDER_STATUS_G:
@@ -470,7 +496,9 @@
 //            [self presentViewController:payView animated:YES completion:^{
 //                
 //            }];
-            
+            [UIFactory SaveNSUserDefaultsWithData:@"0" AndKey:@"processfee"];
+            [UIFactory SaveNSUserDefaultsWithData:@"0" AndKey:@"km"];
+            [UIFactory SaveNSUserDefaultsWithData:@"0" AndKey:@"min"];
         }
             break;
         case ORDER_STATUS_H:
@@ -487,7 +515,9 @@
             paySuccess.payType = @"main";
             [self.navigationController pushViewController:paySuccess animated:YES];
             
-            
+            [UIFactory SaveNSUserDefaultsWithData:@"0" AndKey:@"processfee"];
+            [UIFactory SaveNSUserDefaultsWithData:@"0" AndKey:@"km"];
+            [UIFactory SaveNSUserDefaultsWithData:@"0" AndKey:@"min"];
         }
             break;
         case ORDER_STATUS_K:
@@ -579,7 +609,6 @@
     _flageDriver =[facade getDriverDataWithID:self.driModel.dirverID];
     [facade addHttpObserver:self tag:_flageDriver];
 }
-
 
 #pragma - mark 获取订单详情
 -(void)getOrderDetail

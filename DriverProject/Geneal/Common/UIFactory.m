@@ -151,8 +151,13 @@
     }
 }
 
-+ (void)DeleteAllSaveTokenNSUserDefaults{
++ (void)DeleteAllSaveDataNSUserDefaults{
+    
     NSString* deviceToken = [self getNSUserDefaultsDataWithKey:@"deviceToken"];
+    
+    NSString* fee = [self getNSUserDefaultsDataWithKey:@"processfee"];
+    NSString* km = [self getNSUserDefaultsDataWithKey:@"km"];
+    NSString* min = [self getNSUserDefaultsDataWithKey:@"min"];
     
     NSUserDefaults *userDefatluts = [NSUserDefaults standardUserDefaults];
     NSDictionary *dictionary = [userDefatluts dictionaryRepresentation];
@@ -162,6 +167,10 @@
     }
     
     [self SaveNSUserDefaultsWithData:deviceToken AndKey:@"deviceToken"];
+    
+    [self SaveNSUserDefaultsWithData:fee AndKey:@"processfee"];
+    [self SaveNSUserDefaultsWithData:km AndKey:@"km"];
+    [self SaveNSUserDefaultsWithData:min AndKey:@"min"];
 }
 
 

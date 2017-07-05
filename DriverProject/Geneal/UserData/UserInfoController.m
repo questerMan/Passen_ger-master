@@ -169,7 +169,7 @@
 {
     NSLog(@"%@",dataDic);
     NSData *userData = [NSKeyedArchiver archivedDataWithRootObject:dataDic];
-    [UIFactory DeleteAllSaveTokenNSUserDefaults];
+    [UIFactory DeleteAllSaveDataNSUserDefaults];
     
     [UIFactory SaveNSUserDefaultsWithData:userData AndKey:@"userData"];
     [UIFactory SaveNSUserDefaultsWithData:[dataDic objectForKey:@"access_token"] AndKey:@"access_token"];
@@ -439,7 +439,7 @@
         _outFlag = 0;
         
         [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_LOGIN_FAILURE object:nil];
-        [UIFactory DeleteAllSaveTokenNSUserDefaults];
+        [UIFactory DeleteAllSaveDataNSUserDefaults];
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
     

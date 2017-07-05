@@ -337,7 +337,7 @@
     //创建一个消息对象
     NSNotification * notice = [NSNotification notificationWithName:@"NEWS_REFRESH" object:nil userInfo:userInfo];
     //发送消息
-    [[NSNotificationCenter defaultCenter]postNotification:notice];
+    [[NSNotificationCenter defaultCenter] postNotification:notice];
     
 }
 

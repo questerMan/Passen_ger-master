@@ -575,7 +575,7 @@
             {
                 NSInteger code = [[response objectForKey:@"code"]integerValue];
                 if (code == 102) {
-                    [UIFactory DeleteAllSaveTokenNSUserDefaults];
+                    [UIFactory DeleteAllSaveDataNSUserDefaults];
                     [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFICATION_LOGIN_FAILURE object:@"102"];
                 }
                 [(id)observer requestFailed:response tag:iRequestTag];

@@ -187,7 +187,7 @@
 		C01E90011BC40274002469DE /* BesaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07E20231B9BE28100EAF685 /* BesaViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90021BC40274002469DE /* InvoiceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C013AD2C1BA853CF002701E5 /* InvoiceModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90031BC40274002469DE /* AddressSelectController.m in Sources */ = {isa = PBXBuildFile; fileRef = C014999F1BB967DD00F6F896 /* AddressSelectController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		C01E90041BC40274002469DE /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		C01E90041BC40274002469DE /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C01E90051BC40274002469DE /* CommonPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B174F91BAAF06D00F71426 /* CommonPopView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90061BC40274002469DE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AE01B98500500696D66 /* SBJsonWriter.m */; };
 		C01E90071BC40274002469DE /* ConfirmListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E030331BAEA0630092430E /* ConfirmListView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -212,14 +212,14 @@
 		C01E901A1BC40274002469DE /* UpdateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BA25691BC2392C009F32D0 /* UpdateAlertView.m */; };
 		C01E901B1BC40274002469DE /* TypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0FFDBB51BAEDB810037F0C1 /* TypeModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E901C1BC40274002469DE /* TravelUiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AC77131BA1AF9E009B61EF /* TravelUiObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		C01E901D1BC40274002469DE /* BuildFile in Sources */ = {isa = PBXBuildFile; };
+		C01E901D1BC40274002469DE /* (null) in Sources */ = {isa = PBXBuildFile; };
 		C01E901E1BC40274002469DE /* DDSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACA1611BBAE62B0026C8A8 /* DDSearchManager.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E901F1BC40274002469DE /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224A831B983DB300696D66 /* ASIDataDecompressor.m */; };
 		C01E90201BC40274002469DE /* VariableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACA1581BBA3F980026C8A8 /* VariableView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90211BC40274002469DE /* MenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C07E20371B9C09CD00EAF685 /* MenuCell.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90221BC40274002469DE /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C062D9191BA55CCF0002FEA7 /* BaseModel.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90231BC40274002469DE /* NSString+json.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AED1B98512900696D66 /* NSString+json.m */; };
-		C01E90241BC40274002469DE /* BuildFile in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C01E90241BC40274002469DE /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90251BC40274002469DE /* NSString+Qi.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AF11B98512900696D66 /* NSString+Qi.m */; };
 		C01E90261BC40274002469DE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224A931B983DB300696D66 /* Reachability.m */; };
 		C01E90271BC40274002469DE /* MapSerachRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACA1651BBAE62B0026C8A8 /* MapSerachRequest.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
@@ -233,7 +233,7 @@
 		C01E902F1BC40274002469DE /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C013AD331BA85B76002701E5 /* SettingViewController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90301BC40274002469DE /* PayController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C76C281BB1A2D600271B5A /* PayController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90311BC40274002469DE /* CCBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BA25671BC2392C009F32D0 /* CCBBaseViewController.m */; };
-		C01E90321BC40274002469DE /* BuildFile in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C01E90321BC40274002469DE /* (null) in Sources */ = {isa = PBXBuildFile; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90331BC40274002469DE /* NSString+QiEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AF31B98512900696D66 /* NSString+QiEncoding.m */; };
 		C01E90341BC40274002469DE /* ChooseController.m in Sources */ = {isa = PBXBuildFile; fileRef = C07B5E4C1BB04307005C1EB6 /* ChooseController.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C01E90351BC40274002469DE /* QiHttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3224AC01B983F8C00696D66 /* QiHttpRequest.m */; };
@@ -1840,7 +1840,7 @@
 				C01E90011BC40274002469DE /* BesaViewController.m in Sources */,
 				C01E90021BC40274002469DE /* InvoiceModel.m in Sources */,
 				C01E90031BC40274002469DE /* AddressSelectController.m in Sources */,
-				C01E90041BC40274002469DE /* BuildFile in Sources */,
+				C01E90041BC40274002469DE /* (null) in Sources */,
 				C01E90051BC40274002469DE /* CommonPopView.m in Sources */,
 				C01E90061BC40274002469DE /* SBJsonWriter.m in Sources */,
 				C01E90071BC40274002469DE /* ConfirmListView.m in Sources */,
@@ -1865,14 +1865,14 @@
 				C01E901A1BC40274002469DE /* UpdateAlertView.m in Sources */,
 				C01E901B1BC40274002469DE /* TypeModel.m in Sources */,
 				C01E901C1BC40274002469DE /* TravelUiObject.m in Sources */,
-				C01E901D1BC40274002469DE /* BuildFile in Sources */,
+				C01E901D1BC40274002469DE /* (null) in Sources */,
 				C01E901E1BC40274002469DE /* DDSearchManager.m in Sources */,
 				C01E901F1BC40274002469DE /* ASIDataDecompressor.m in Sources */,
 				C01E90201BC40274002469DE /* VariableView.m in Sources */,
 				C01E90211BC40274002469DE /* MenuCell.m in Sources */,
 				C01E90221BC40274002469DE /* BaseModel.m in Sources */,
 				C01E90231BC40274002469DE /* NSString+json.m in Sources */,
-				C01E90241BC40274002469DE /* BuildFile in Sources */,
+				C01E90241BC40274002469DE /* (null) in Sources */,
 				C01E90251BC40274002469DE /* NSString+Qi.m in Sources */,
 				C01E90261BC40274002469DE /* Reachability.m in Sources */,
 				C01E90271BC40274002469DE /* MapSerachRequest.m in Sources */,
@@ -1886,7 +1886,7 @@
 				C01E902F1BC40274002469DE /* SettingViewController.m in Sources */,
 				C01E90301BC40274002469DE /* PayController.m in Sources */,
 				C01E90311BC40274002469DE /* CCBBaseViewController.m in Sources */,
-				C01E90321BC40274002469DE /* BuildFile in Sources */,
+				C01E90321BC40274002469DE /* (null) in Sources */,
 				C0C47DF01BD3673F00E69420 /* SettingCell.m in Sources */,
 				C01E90331BC40274002469DE /* NSString+QiEncoding.m in Sources */,
 				C01E90341BC40274002469DE /* ChooseController.m in Sources */,
