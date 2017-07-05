@@ -147,7 +147,8 @@
     tips.textColor = kUIColorFromRGB(0xf4942d);
     tips.textAlignment = NSTextAlignmentRight;
     
-    NSString *cost = [NSString stringWithFormat:@"%d",[self.allCost intValue]];
+//    NSString *cost = [NSString stringWithFormat:@"%d",[self.allCost intValue]];
+    NSString *cost = self.allCost;
     amount = [UIFactory createLabel:cost Font:[UIFont systemFontOfSize:28]];
     amount.textColor = kUIColorFromRGB(0xf4942d);
     amount.textAlignment = NSTextAlignmentCenter;

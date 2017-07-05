@@ -100,8 +100,8 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    //移除所有司机图标
-    [self.mapView removeAllDriviers];
+//    //移除所有司机图标
+//    [self.mapView removeAllDriviers];
     [self initOpreation];
 }
 -(void)viewWillDisappear:(BOOL)animated
@@ -468,6 +468,11 @@
             NSString* fee = [UIFactory getNSUserDefaultsDataWithKey:@"processfee"];
             NSString* km = [UIFactory getNSUserDefaultsDataWithKey:@"km"];
             NSString* min = [UIFactory getNSUserDefaultsDataWithKey:@"min"];
+            if ([fee isEqualToString:@" "]||[km isEqualToString:@" "]||[min isEqualToString:@" "]) {
+                fee = @"0";
+                km  = @"0";
+                min = @"0";
+            }
             
             if (self.mapView.annotationView.drivingoutView) {
             self.mapView.annotationView.drivingoutView.title = [NSMutableString stringWithFormat:@"%@元",[UIFactory getNSUserDefaultsDataWithKey:@"processfee"]];//@"28元";
@@ -475,7 +480,6 @@
             [self.mapView.annotationView.drivingoutView autoStretchWidth];
             [self.mapView.annotationView automaticAlignment];
             }
-            
         }
             break;
         case ORDER_STATUS_G:
