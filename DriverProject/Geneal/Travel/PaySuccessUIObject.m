@@ -50,7 +50,8 @@
     tips.textColor = kUIColorFromRGB(0xf4942d);
     tips.textAlignment = NSTextAlignmentRight;
     
-    NSString *fee = [NSString stringWithFormat:@"%d",[[dic objectForKey:@"fee"] intValue]];
+//    NSString *fee = [NSString stringWithFormat:@"%d",[[dic objectForKey:@"fee"] intValue]];
+    NSString *fee =  [NSString stringWithFormat:@"%@",  [dic objectForKey:@"fee"]];
     self.amountLabel = [UIFactory createLabel:fee Font:[UIFont systemFontOfSize:30]];
     _amountLabel.textColor = kUIColorFromRGB(0xf4942d);
     _amountLabel.textAlignment = NSTextAlignmentCenter;
