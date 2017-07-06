@@ -116,7 +116,7 @@
             
         }else{
             
-            payTable = [[UITableView alloc]initWithFrame:CGRectMake(0, popView.bottom + 10, self.view.width, heigt_view) style:UITableViewStylePlain];
+            payTable = [[UITableView alloc]initWithFrame:CGRectMake(0, popView.bottom + 10, self.view.width, heigt_view) style:UITableViewStylePlain];  
         }
         
         UIView *bgView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.height - 60, self.view.width, 60)];

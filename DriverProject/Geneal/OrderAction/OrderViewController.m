@@ -464,10 +464,9 @@
                 [cancelBtn setTitle:@"投诉" forState:UIControlStateNormal];
             }
             
-            
             NSString* fee = [UIFactory getNSUserDefaultsDataWithKey:@"processfee"];
             NSString* km = [UIFactory getNSUserDefaultsDataWithKey:@"km"];
-            NSString* min = [UIFactory getNSUserDefaultsDataWithKey:@"min"];
+            NSString* min = [NSString stringWithFormat:@"%@",[UIFactory getNSUserDefaultsDataWithKey:@"min"]];
             if ([fee isEqualToString:@" "]||[km isEqualToString:@" "]||[min isEqualToString:@" "]) {
                 fee = @"0";
                 km  = @"0";
@@ -475,8 +474,8 @@
             }
             
             if (self.mapView.annotationView.drivingoutView) {
-            self.mapView.annotationView.drivingoutView.title = [NSMutableString stringWithFormat:@"%@元",[UIFactory getNSUserDefaultsDataWithKey:@"processfee"]];//@"28元";
-            self.mapView.annotationView.drivingoutView.subTitle = [NSMutableString stringWithFormat:@"%@公里/%@分钟",[UIFactory getNSUserDefaultsDataWithKey:@"km"],[UIFactory getNSUserDefaultsDataWithKey:@"min"]];//@"1公里/2分钟";
+            self.mapView.annotationView.drivingoutView.title = [NSMutableString stringWithFormat:@"%@元",fee];//@"28元";
+            self.mapView.annotationView.drivingoutView.subTitle = [NSMutableString stringWithFormat:@"%@公里/%@分钟",km,min];//@"1公里/2分钟";
             [self.mapView.annotationView.drivingoutView autoStretchWidth];
             [self.mapView.annotationView automaticAlignment];
             }

@@ -72,7 +72,7 @@
         self.navigationController.interactivePopGestureRecognizer.enabled = YES;
     }
     //添加点击界面
-    UITapGestureRecognizer *tapViewRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapViewResignFirstRespinder)];
+    UITapGestureRecognizer *tapViewRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewResignFirstRespinder)];
     [self.view addGestureRecognizer:tapViewRecognizer];
     
     [self creatUI];
@@ -96,6 +96,7 @@
     
     UIButton *backBtn = [UIFactory createButton:[UIImage imageNamed:@"back_white"]];
     [backBtn addTarget:self action:@selector(backToRootView) forControlEvents:UIControlEventTouchUpInside];
+    [backBtn setTintColor:UIColorFromRGB(@"#f68332")];
     [self.view addSubview:backBtn];
     self.backBtn = backBtn;
     
@@ -104,7 +105,7 @@
     self.logoImg = logoImg;
     
     UIView *middleView = [[UIView alloc] init];
-    middleView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:.25];
+    middleView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:.85];
     [self.view addSubview:middleView];
     self.middleView = middleView;
     
@@ -113,14 +114,14 @@
     [self.middleView addSubview:_nameView];
     
     _input_Name = [[UITextField alloc] init];
-    _input_Name.textColor = [UIColor whiteColor];
+    _input_Name.textColor = UIColorFromRGB(@"#f68332");
     _input_Name.keyboardType = UIKeyboardTypePhonePad;
     _input_Name.delegate = self;
     _input_Name.tag = 001;
     _input_Name.text = [[UIFactory getNSUserDefaultsDataWithKey:@"phone"] isEqualToString:NULL_DATA]?@"":[UIFactory getNSUserDefaultsDataWithKey:@"phone"];
-    _input_Name.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"手机号码" attributes:@{NSForegroundColorAttributeName : UIColorFromRGB(@"#b5c0c1"),NSFontAttributeName : [UIFont systemFontOfSize:MATCHSIZE(32)]}];
+    _input_Name.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"手机号码" attributes:@{NSForegroundColorAttributeName : UIColorFromRGB(@"#cccccc"),NSFontAttributeName : [UIFont systemFontOfSize:MATCHSIZE(36)]}];
     _input_Name.textAlignment = NSTextAlignmentCenter;
-    _input_Name.font = [UIFont systemFontOfSize:MATCHSIZE(32)];
+    _input_Name.font = [UIFont systemFontOfSize:MATCHSIZE(36)];
     [_nameView addSubview:_input_Name];
     
     _line_Name = [[UIView alloc]init];
@@ -150,13 +151,13 @@
     [_passwordView addSubview:_logo_Pass];
     
     _input_Pass = [[UITextField alloc] init];
-    _input_Pass.textColor = [UIColor whiteColor];
+    _input_Pass.textColor = UIColorFromRGB(@"#f68332");
     _input_Pass.secureTextEntry = NO;
     _input_Pass.keyboardType = UIKeyboardTypeNumberPad;
     _input_Pass.delegate = self;
     _input_Pass.tag = 002;
-    _input_Pass.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"验证码" attributes:@{NSForegroundColorAttributeName : UIColorFromRGB(@"#b5c0c1"),NSFontAttributeName : [UIFont systemFontOfSize:MATCHSIZE(32)]}];
-    _input_Pass.font = [UIFont systemFontOfSize:MATCHSIZE(32)];
+    _input_Pass.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"验证码" attributes:@{NSForegroundColorAttributeName : UIColorFromRGB(@"#cccccc"),NSFontAttributeName : [UIFont systemFontOfSize:MATCHSIZE(36)]}];
+    _input_Pass.font = [UIFont systemFontOfSize:MATCHSIZE(36)];
     _input_Pass.textAlignment = NSTextAlignmentCenter;
     [_passwordView addSubview:_input_Pass];
     
@@ -167,24 +168,28 @@
     _checkBox = [UIFactory createButton:[UIImage imageNamed:@"hook_yes"]];
     [_checkBox addTarget:self action:@selector(confirmUserAgreement) forControlEvents:UIControlEventTouchUpInside];
     _isCheck = YES;
-    UILabel* userLabel = [UIFactory createLabel:@"点击登录，即表示你同意" Font:[UIFont systemFontOfSize:MATCHSIZE(22)]];
-    userLabel.textColor = [UIColor colorWithWhite:1 alpha:1.0];
+    UILabel* userLabel = [UIFactory createLabel:@"点击登录，即表示你同意" Font:[UIFont systemFontOfSize:MATCHSIZE(24)]];
+    userLabel.textColor = UIColorFromRGB(@"#f68332");
     [self.view addSubview:userLabel];
     self.userLabel = userLabel;
     
-    _userAgreementBtn = [UIFactory createButton:@"《用户协议》" BackgroundColor:[UIColor clearColor] andTitleColor:kUIColorFromRGB(0xf4942d)];
-    [_userAgreementBtn.titleLabel setFont:[UIFont systemFontOfSize:MATCHSIZE(22)]];
+    _userAgreementBtn = [UIFactory createButton:@"<用户协议>" BackgroundColor:[UIColor clearColor] andTitleColor:UIColorFromRGB(@"#f68332")];
+    [_userAgreementBtn.titleLabel setFont:[UIFont systemFontOfSize:MATCHSIZE(26)]];
     _userAgreementBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [_userAgreementBtn addTarget:self action:@selector(openUserAgreement) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_userAgreementBtn];
     
     _loginBtn = [UIButton buttonWithType:0];
-    [_loginBtn setAttributedTitle:[[NSAttributedString alloc] initWithString:@"登录" attributes:@{NSForegroundColorAttributeName : UIColorFromRGB(@"#f68332"),NSFontAttributeName : [UIFont systemFontOfSize:MATCHSIZE(36)]}] forState:0];
+    [_loginBtn setAttributedTitle:[[NSAttributedString alloc] initWithString:@"登录" attributes:@{NSForegroundColorAttributeName : UIColorFromRGB(@"#ffffff"),NSFontAttributeName : [UIFont systemFontOfSize:MATCHSIZE(40)]}] forState:0];
+    [_loginBtn setBackgroundImage:[UIImage imageNamed:@"button"] forState:0];
+    [_loginBtn setBackgroundImage:[UIImage imageNamed:@"button_1"] forState:1];
+//    [_loginBtn setAttributedTitle:[[NSAttributedString alloc] initWithString:@"登录" attributes:@{NSForegroundColorAttributeName : [UIColor whiteColor],NSFontAttributeName : [UIFont systemFontOfSize:MATCHSIZE(40)]}] forState:1 << 0];
+//    [_loginBtn setBackgroundImage:[UIImage imageNamed:@"loginbutton"] forState:1 << 0];
     _loginBtn.backgroundColor = [UIColor clearColor];
-    _loginBtn.layer.cornerRadius = MATCHSIZE(34);
+    _loginBtn.layer.cornerRadius = MATCHSIZE(8);
     _loginBtn.layer.masksToBounds = YES;
-    _loginBtn.layer.borderWidth = MATCHSIZE(2);
-    _loginBtn.layer.borderColor = UIColorFromRGB(@"#f68332").CGColor;
+//    _loginBtn.layer.borderWidth = MATCHSIZE(2);
+//    _loginBtn.layer.borderColor = UIColorFromRGB(@"#f68332").CGColor;
     [_loginBtn addTarget:self action:@selector(loginBtnAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_loginBtn];
 }
@@ -213,14 +218,14 @@
     [self.middleView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.logoImg.mas_bottom).offset(MATCHSIZE(52));
         make.centerX.offset(0);
-        make.width.offset(MATCHSIZE(530));
+        make.width.offset(MATCHSIZE(614));
         make.height.offset(MATCHSIZE(322));
     }];
     
     [self.nameView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.offset(MATCHSIZE(24));
-        make.top.offset(MATCHSIZE(42));
-        make.width.offset(MATCHSIZE(344));
+        make.left.offset(MATCHSIZE(40));
+        make.top.offset(MATCHSIZE(40));
+        make.width.offset(MATCHSIZE(378));
         make.height.offset(MATCHSIZE(80));
     }];
     
@@ -243,17 +248,10 @@
         make.height.offset(MATCHSIZE(2));
     }];
     
-    [self.codeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.offset(MATCHSIZE(-22));
-        make.width.offset(MATCHSIZE(98));
-        make.height.offset(MATCHSIZE(52));
-        make.bottom.equalTo(self.nameView.mas_bottom);
-    }];
-    
     [self.passwordView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.nameView.mas_bottom).offset(MATCHSIZE(62));
-        make.left.offset(MATCHSIZE(24));
-        make.width.offset(MATCHSIZE(344));
+        make.left.offset(MATCHSIZE(40));
+        make.width.offset(MATCHSIZE(378));
         make.height.offset(MATCHSIZE(80));
     }];
     
@@ -276,6 +274,13 @@
         make.height.offset(MATCHSIZE(2));
     }];
     
+    [self.codeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.offset(MATCHSIZE(-40));
+        make.width.offset(MATCHSIZE(108));
+        make.height.offset(MATCHSIZE(68));
+        make.bottom.equalTo(self.passwordView.mas_bottom).offset(MATCHSIZE(-10));
+    }];
+    
     [self.userLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.middleView.mas_bottom).offset(MATCHSIZE(30));
         make.left.equalTo(self.middleView.mas_left).offset(MATCHSIZE(24));
@@ -288,9 +293,11 @@
     
     [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.middleView.mas_bottom).offset(MATCHSIZE(160));
-        make.centerX.offset(0);
-        make.width.offset(MATCHSIZE(388));
-        make.height.offset(MATCHSIZE(68));
+        make.left.equalTo(self.middleView.mas_left);
+        make.right.equalTo(self.middleView.mas_right);
+//        make.centerX.offset(0);
+//        make.width.offset(MATCHSIZE(388));
+        make.height.offset(MATCHSIZE(70));
     }];
 }
 
